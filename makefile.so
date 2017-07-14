@@ -1,0 +1,7 @@
+CC = gcc
+libNtYtk.so:nt_ytk.o
+		$(CC) -shared -o libNtYtk.so nt_ytk.o
+nt_ytk.o:nt_ytk.c
+		$(CC) -c -fPIC -o nt_ytk.o nt_ytk.c
+clean:
+		-rm *.o
